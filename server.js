@@ -5,7 +5,7 @@ import env from "./config/env.js"
 import apiRoutes from "./routes/index.js"
 
 
-const port = env.PORT || 8000
+const port = env.PORT || 5000
 
 /** Database connection */
 dbConfig.sync({ alter: true })
