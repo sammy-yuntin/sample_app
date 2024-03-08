@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "server.js",
   "type": "module",
-  "repository": "https://github.com/sammy-yuntin/sample_app.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammy-yuntin/sample_app.git"
+  },
   "author": "Esho Oluwasegun <eshooluwasegun98@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -19,5 +22,11 @@
     "nodemon": "^3.0.3",
     "redis": "^4.6.13",
     "sequelize": "^6.37.1"
-  }
+  },
+  "description": "1. **Datasource**: This folder holds database connection configuration files\r 2. **Model**: This folder holds schema files\r 3. **Repositroy**: This folder holds ORM connection files\r 4. **Service**: This folder holds business logic files\r 4. **Controller**: This folder holds files which consumes the service files\r 4. **Router**: This folder holds files for endpoint routes",
+  "bugs": {
+    "url": "https://github.com/sammy-yuntin/sample_app/issues"
+  },
+  "homepage": "https://github.com/sammy-yuntin/sample_app#readme",
+  "devDependencies": {}
 }

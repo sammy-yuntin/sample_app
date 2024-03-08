@@ -27,7 +27,7 @@ const User = dbConfig.define("user", {
 },
 {
    timestamps: true 
-})
+});
 
 
 export default User

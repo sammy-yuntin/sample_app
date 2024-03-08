@@ -1,5 +1,5 @@
-import { create } from "./user.js"; 
+import { create,fetch,update,fetchSpecific,remove } from "./user.js"; 
 
 export {
-    create
+    create,fetch,update,fetchSpecific,remove
 }

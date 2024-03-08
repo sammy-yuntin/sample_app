@@ -1,5 +1,5 @@
-import {  createUser } from "./user.js"
+import {  createUser, fetchUsers, updateUser, fetchUser, removeUser } from "./user.js"
 
 export {
-    createUser
+    createUser, fetchUsers, updateUser, fetchUser,removeUser
 }

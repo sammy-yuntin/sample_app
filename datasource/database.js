@@ -1,6 +1,7 @@
 import { Sequelize } from "sequelize";
 import env from "../config/env.js";
 
+
 const dbConfig = new Sequelize(
     env.DB_NAME,
     env.DB_USERNAME,

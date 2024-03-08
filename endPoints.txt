@@ -1,0 +1,5 @@
+CREATE_USER = localhost:5000/api/user/
+VIEW_ONE_USER = localhost:5000/api/user/user/:id
+VIEW_ALL_USERS = localhost:5000/api/user/users
+DELETE_USER = localhost:5000/api/user/remove/:id
+UPDATE_USER = localhost:5000/api/user/update/:id
