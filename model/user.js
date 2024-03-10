@@ -30,4 +30,33 @@ const User = dbConfig.define("user", {
 });
 
 
-export default User
+
+export default User 
+
+/* const firstTimeUser = dbConfig.define("firstTimeUser", {
+    id: {
+        type: DataTypes.UUID,
+        defaultValue: UUIDV4,
+        primaryKey: true
+    },
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: "email"
+    },
+    username: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
+},
+{
+   timestamps: true 
+}); */

@@ -1,6 +1,18 @@
 import { User } from "../model/index.js";
+import bcrypt from "bcryptjs"
 
 export const create = async (payload) => {
+    var {name, email,username, password} = payload;
+    var salt = await bcrypt.genSalt(5);
+    var password = await bcrypt.hash(password, salt)
+
+    payload = {
+        name,
+        email,
+        username,
+        password
+    }
+
     return await User.create(payload);
 }
 
