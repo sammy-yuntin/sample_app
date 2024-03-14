@@ -16,9 +16,11 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => {
-    res.send("This server is working!!")
+    res.send("This server is working!!!")
 })
-
+app.get('/db', (req, res) => {
+    dbConfig.query("CREATE DATABASE sample")
+})
 app.use('/api', apiRoutes)
 
 
