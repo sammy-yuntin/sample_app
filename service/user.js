@@ -41,40 +41,40 @@ export const updateUser = async (id,payload)=>{
 
     const initial = await fetchSpecific(id);
 
-    let sameName = (initial.name == payload.name )
-    let sameMail = (initial.email == payload.email)
-    let samePass = (initial.password == payload.password)
-
-    let isSame = (sameName && sameMail && samePass)
-    
-    if(!isSame){
-        update(id, payload);
-    }
-    const new_change = await fetchSpecific(id);
-    
-    console.log(initial);
-
-    //console.log(new_change.dataValues);
-    /* if(!initial){
+    if (initial == null){
         return {   
+
             status:"success",
             message: `User with id ${id} not found`,
             
         }
-        }else{ */
-            return  (
-                isSame ? 
-                {
-                    message: "Sorry, you cannot update with the same data as of old ",
-                    status:"success"
-                }
-                :
-                {   
-                        status:"success",
-                        message: "succesfully updated user",
-                        details: new_change
-                })
+    }else{
+        let sameName = (initial.name == payload.name )
+        let sameMail = (initial.email == payload.email)
+        let samePass = (initial.password == payload.password)
+
+        const isSame = (sameName && sameMail && samePass)
+
+
+        if(!isSame){
+            update(id, payload);
         }
+        const new_change = await fetchSpecific(id);
+
+        return  (
+            isSame ? 
+            {
+                message: "Sorry, you cannot update with the same data as of old ",
+                status:"success"
+            }
+            :
+            {   
+                    status:"success",
+                    message: "succesfully updated user",
+                    details: new_change
+            })
+    }
+}
     
 /* } */
 
